@@ -7,6 +7,6 @@ spec:
     app: counter
   ports:
     - port: 80
-      targetPort: 8080
-  type: ClusterIP
+      targetPort: 8000
+  type: NodePort
 
