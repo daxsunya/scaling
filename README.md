@@ -5,10 +5,11 @@
   - [Docker registry for Linux Part 2 & 3](#docker-registry-for-linux-part-2--3)
   - [Docker Orchestration Hands-on Lab](#docker-orchestration-hands-on-lab)
   - [Swarm stack introduction](#swarm-stack-introduction)
-  - [Счетчик](#счетчик)
+  - [Счетчик (kubernetes)](#счетчик-docker)
     - [Промежуточные выводы](#промежуточные-выводы)
     - [Увеличение инстансов БД](#увеличение-инстансов-бд)
       - [Особенности при работе реплицированного сервиса с БД](#особенности-при-работе-реплицированного-сервиса-с-бд)
+  - [Счетчик (kubernetes)](#счетчик-kubernetes)
 
 # Масштабирование приложений
 ## Docker registry for Linux Part 1
@@ -45,7 +46,7 @@
 
 <img width="479" height="286" alt="Снимок экрана 2026-01-20 в 23 32 11" src="https://github.com/user-attachments/assets/f2bd4a2c-5d2c-4bb0-b30f-dbbba3d9ef45" />
 
-## Счетчик
+## Счетчик (docker)
 Проведем сравнение в одинаково выделенных ресурсах, а именно установим в docker-compose для каждого варианта приложения:
 
 - для redis: cpu - 0.5, memory - 512M
@@ -95,3 +96,5 @@ _**Redis стал узким местом**_
 <img width="566" height="146" alt="Снимок экрана 2026-01-22 в 22 51 15" src="https://github.com/user-attachments/assets/259daf85-4340-4273-9803-4844d5bee656" />
 
 Получается, что при вызове сервиса попадаем то на один инстанс то на второй и обращаемся к хранилищу каждого, а так как данные не синхронизированы между собой, то ответ непредсказуемый
+
+## Счетчик (kubernetes)
