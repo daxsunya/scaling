@@ -5,7 +5,7 @@
   - [Docker registry for Linux Part 2 & 3](#docker-registry-for-linux-part-2--3)
   - [Docker Orchestration Hands-on Lab](#docker-orchestration-hands-on-lab)
   - [Swarm stack introduction](#swarm-stack-introduction)
-  - [Счетчик (kubernetes)](#счетчик-docker)
+  - [Счетчик (docker)](#счетчик-docker)
     - [Промежуточные выводы](#промежуточные-выводы)
     - [Увеличение инстансов БД](#увеличение-инстансов-бд)
       - [Особенности при работе реплицированного сервиса с БД](#особенности-при-работе-реплицированного-сервиса-с-бд)
