@@ -33,3 +33,19 @@
 
 <img width="479" height="286" alt="Снимок экрана 2026-01-20 в 23 32 11" src="https://github.com/user-attachments/assets/f2bd4a2c-5d2c-4bb0-b30f-dbbba3d9ef45" />
 
+## Счетчик
+Проведем сравнение в одинаково выделенных ресурсах, а именно установим в docker-compose для каждого варианта приложения:
+
+- для redis: cpu - 0.5, memory - 512M
+- для app: cpu - 0.3, memory - 256M
+
+<img width="597" height="442" alt="Снимок экрана 2026-01-22 в 22 01 52" src="https://github.com/user-attachments/assets/ece16aae-e4fa-46cb-8471-f12295535af7" />
+
+В итоге rps для приложения с одним контейнером выглядит так:
+
+<img width="2928" height="1800" alt="total_requests_per_second_1769107227 751" src="https://github.com/user-attachments/assets/23e652ea-1cab-46d3-9627-845993325bd5" />
+
+С несколькими:
+
+<img width="2928" height="1800" alt="total_requests_per_second_1769107630 82" src="https://github.com/user-attachments/assets/271b4d37-a5aa-49d4-bc31-1f59d26e3cf5" />
+
