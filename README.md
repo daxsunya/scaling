@@ -98,3 +98,35 @@ _**Redis стал узким местом**_
 Получается, что при вызове сервиса попадаем то на один инстанс то на второй и обращаемся к хранилищу каждого, а так как данные не синхронизированы между собой, то ответ непредсказуемый
 
 ## Счетчик (kubernetes)
+[Файлы конфигурации для запуска](https://github.com/daxsunya/scaling/tree/main/counter-with-kubernetes)
+
+### Запуск
+Собрать докер
+
+```
+docker build -t counter:latest .
+```
+
+Запустить миникуб
+
+```
+minikube delete
+minikube start --driver=docker
+```
+
+Применить файлы конфигурации для миникуб
+
+```
+kubectl apply -f redis-deployment.yaml 
+kubectl apply -f redis-service.yaml      
+kubectl apply -f app-deployment.yaml
+kubectl apply -f app-service.yaml
+```
+
+Убедиться, что приложение запущено и работает корректно
+1. Проверить поды
+
+```
+kubectl get po
+```
+<img width="471" height="100" alt="Снимок экрана 2026-01-23 в 00 05 55" src="https://github.com/user-attachments/assets/bc230838-e39c-4653-ac77-245dc54a4ea6" />
