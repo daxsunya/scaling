@@ -1,0 +1,46 @@
+services:
+  app:
+    image: app:latest
+    env_file:
+      - ./backend/.env
+    ports:
+      - "80:8000"
+    deploy:
+      replicas: 4
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: '0.3'
+          memory: 256M
+        reservations:
+          cpus: '0.3'
+          memory: 256M
+    networks:
+      - app-net
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--save", "60", "1", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    networks:
+      - app-net
+
+volumes:
+  redis_data:
+
+networks:
+  app-net:
+    driver: overlay
