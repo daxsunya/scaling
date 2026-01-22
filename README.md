@@ -45,7 +45,10 @@
 
 <img width="2928" height="1800" alt="total_requests_per_second_1769107227 751" src="https://github.com/user-attachments/assets/23e652ea-1cab-46d3-9627-845993325bd5" />
 
+- _[подробный отчет](https://github.com/daxsunya/scaling/tree/main/counter-1-container)_
+
 С несколькими:
 
 <img width="2928" height="1800" alt="total_requests_per_second_1769107630 82" src="https://github.com/user-attachments/assets/271b4d37-a5aa-49d4-bc31-1f59d26e3cf5" />
 
+- _[подробный отчет](https://github.com/daxsunya/scaling/tree/main/counter-4-container)_
