@@ -130,3 +130,12 @@ kubectl apply -f app-service.yaml
 kubectl get po
 ```
 <img width="471" height="100" alt="Снимок экрана 2026-01-23 в 00 05 55" src="https://github.com/user-attachments/assets/bc230838-e39c-4653-ac77-245dc54a4ea6" />
+
+2. Проверить работу приложения
+   - Сделать порт-форвард для локальной проверки
+   - Посмотреть результат вызова методов
+   - <img width="724" height="402" alt="Снимок экрана 2026-01-23 в 00 43 50" src="https://github.com/user-attachments/assets/0195879d-d774-448b-9ca7-e5f7d72fa99b" />
+3. Запустить тестирование нагрузки на тех же данных
+   ```
+    locust -f locustfile.py --host=http://localhost:9090
+   ```
