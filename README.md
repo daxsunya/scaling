@@ -1,3 +1,15 @@
+## Оглавление
+
+- [Масштабирование приложений](#масштабирование-приложений)
+  - [Docker registry for Linux Part 1](#docker-registry-for-linux-part-1)
+  - [Docker registry for Linux Part 2 & 3](#docker-registry-for-linux-part-2--3)
+  - [Docker Orchestration Hands-on Lab](#docker-orchestration-hands-on-lab)
+  - [Swarm stack introduction](#swarm-stack-introduction)
+  - [Счетчик](#счетчик)
+    - [Промежуточные выводы](#промежуточные-выводы)
+    - [Увеличение инстансов БД](#увеличение-инстансов-бд)
+      - [Особенности при работе реплицированного сервиса с БД](#особенности-при-работе-реплицированного-сервиса-с-бд)
+
 # Масштабирование приложений
 ## Docker registry for Linux Part 1
 <img width="740" height="109" alt="Снимок экрана 2026-01-19 в 21 57 19" src="https://github.com/user-attachments/assets/44d37ac3-f8c6-48e4-a795-b63f93cc91bb" />
